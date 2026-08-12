@@ -1,0 +1,9 @@
+{
+  "mainColor": "#ff6d6d",
+  "saveDb": true,
+  "enableShadow": true,
+  "enableTip": true,
+  "isAntiRecallSelfMsg": false,
+  "maxMsgSaveLimit": 10000,
+  "deleteMsgCountPerTime": 500
+}

@@ -1,0 +1,218 @@
+<template id="plugin-item">
+    <setting-item>
+        <div class="info-area">
+            <div>
+                <slot class="icon"></slot>
+                <div>
+                    <setting-text>
+                        <slot class="name"></slot>
+                    </setting-text>
+                    <setting-text data-type="secondary">
+                        <slot class="description"></slot>
+                    </setting-text>
+                </div>
+            </div>
+            <setting-text data-type="secondary">
+                <span>版本：<slot class="version"></slot></span>
+                <span>作者：<slot class="authors"></slot></span>
+                <span>仓库：<slot class="repo"></slot></span>
+            </setting-text>
+        </div>
+        <setting-button data-type="secondary" class="manager">管理</setting-button>
+        <setting-modal class="manager-modal">
+            <setting-section data-title="插件设置（将在下次启动时生效）">
+                <setting-panel>
+                    <setting-list data-direction="column">
+                        <setting-item>
+                            <setting-text>启用插件</setting-text>
+                            <setting-switch class="switch"></setting-switch>
+                        </setting-item>
+                    </setting-list>
+                </setting-panel>
+                <setting-panel>
+                    <setting-list data-direction="column">
+                        <setting-item>
+                            <setting-text>删除插件数据</setting-text>
+                            <setting-switch class="data"></setting-switch>
+                        </setting-item>
+                        <setting-item>
+                            <setting-text>删除插件本体</setting-text>
+                            <setting-switch class="self"></setting-switch>
+                        </setting-item>
+                    </setting-list>
+                </setting-panel>
+            </setting-section>
+        </setting-modal>
+    </setting-item>
+</template>
+
+
+<setting-section data-title="版本" class="versions">
+    <setting-panel class="qwqnt" style="display: none;">
+        <setting-list data-direction="column">
+            <setting-item>
+                <setting-text>LiteLoader 作为 QwQNT 插件运行中</setting-text>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-direction="row">
+            <setting-item class="liteloader">
+                <setting-text>LiteLoader</setting-text>
+                <setting-text data-type="secondary" class="version"></setting-text>
+            </setting-item>
+            <setting-item class="qqnt">
+                <setting-text>QQNT</setting-text>
+                <setting-text data-type="secondary" class="version"></setting-text>
+            </setting-item>
+            <setting-item class="electron">
+                <setting-text>Electron</setting-text>
+                <setting-text data-type="secondary" class="version"></setting-text>
+            </setting-item>
+            <setting-item class="chromium">
+                <setting-text>Chromium</setting-text>
+                <setting-text data-type="secondary" class="version"></setting-text>
+            </setting-item>
+            <setting-item class="nodejs">
+                <setting-text>Node.js</setting-text>
+                <setting-text data-type="secondary" class="version"></setting-text>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-direction="column" class="new">
+            <setting-item>
+                <setting-text>正在发现 LiteLoaderQQNT 是否有新版本</setting-text>
+                <setting-button data-type="secondary">你先别急</setting-button>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+</setting-section>
+
+
+<setting-section data-title="插件" class="plugins">
+    <setting-panel>
+        <setting-list data-direction="column" class="plugin">
+            <setting-item class="install">
+                <div>
+                    <setting-text>安装新插件</setting-text>
+                    <setting-text data-type="secondary">支持类型：解压前 zip 格式文件 | 解压后 manifest.json 文件</setting-text>
+                </div>
+                <setting-button data-type="secondary">选择文件</setting-button>
+            </setting-item>
+            <setting-item class="loader">
+                <setting-text>插件加载器</setting-text>
+                <setting-switch></setting-switch>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-title="扩展" is-collapsible data-direction="column" class="extension"></setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-title="主题" is-collapsible data-direction="column" class="theme"></setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-title="依赖" is-collapsible data-direction="column" class="framework"></setting-list>
+    </setting-panel>
+</setting-section>
+
+
+<setting-section data-title="目录" class="path">
+    <setting-panel>
+        <setting-list data-direction="column">
+            <setting-item>
+                <div>
+                    <setting-text>本体目录位置</setting-text>
+                    <setting-text data-type="secondary">LiteLoaderQQNT 本体的安装位置，可以安装到任意位置</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link class="root"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+            <setting-item>
+                <div>
+                    <setting-text>数据目录位置</setting-text>
+                    <setting-text data-type="secondary">可通过 LITELOADERQQNT_PROFILE 环境变量指定数据存放位置</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link class="profile"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+</setting-section>
+
+
+<setting-section data-title="关于" class="about">
+    <setting-panel>
+        <setting-list data-direction="column">
+            <setting-item>
+                <div>
+                    <setting-text>LiteLoaderQQNT</setting-text>
+                    <setting-text data-type="secondary">LiteLoaderQQNT 是 QQNT 的插件加载器，一般在 QQNT 的环境内简称为 LiteLoader。</setting-text>
+                    <setting-text data-type="secondary">它可以让你自由地为 QQNT 添加各种插件，实现美化主题、增加功能等各种功能。</setting-text>
+                </div>
+            </setting-item>
+            <setting-item>
+                <div>
+                    <setting-text>开源协议</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link data-value="https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/blob/main/LICENSE">MIT License</setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-direction="column">
+            <setting-item>
+                <div>
+                    <setting-text>LiteLoaderQQNT 官网</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link data-value="https://liteloaderqqnt.github.io"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+            <setting-item>
+                <div>
+                    <setting-text>GitHub 仓库</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link data-value="https://github.com/LiteLoaderQQNT"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+            <setting-item>
+                <div>
+                    <setting-text>Telegram 群组</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link data-value="https://t.me/LiteLoaderQQNT"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+            <setting-item>
+                <div>
+                    <setting-text>Telegram 频道</setting-text>
+                    <setting-text data-type="secondary">
+                        <setting-link data-value="https://t.me/LiteLoaderQQNT_Channel"></setting-link>
+                    </setting-text>
+                </div>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+    <setting-panel>
+        <setting-list data-direction="column">
+            <setting-item>
+                <setting-text class="hitokoto_text">正在加载：Hitokoto - 一言</setting-text>
+                <div></div>
+            </setting-item>
+            <setting-item>
+                <div></div>
+                <div>
+                    <span>——</span>
+                    <span class="hitokoto_author">LiteLoaderQQNT</span>
+                </div>
+            </setting-item>
+        </setting-list>
+    </setting-panel>
+</setting-section>

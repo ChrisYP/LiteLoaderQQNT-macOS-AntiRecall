@@ -1,0 +1,15 @@
+.DS_Store
+*.zip
+*.log
+global-capture-events.jsonl
+
+# Local runtime data must never be committed.
+data/
+qq-recalled-db/
+preserved-images/
+session-images/
+
+# Installer and test scratch data.
+backups/
+tmp/
+coverage/
