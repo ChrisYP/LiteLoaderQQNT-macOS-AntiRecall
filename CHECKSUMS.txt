@@ -1,5 +1,5 @@
 c3e1c23b0d7802d2717bf8e0fd86224dd53beff270b59e2f0929ed51bd6e98df  ./.gitignore
-f7120979a3cce696ab705593f7a4f3eb28663dbb3235875f3aabce8c891aecbc  ./README.md
+e5ed9f19d8f0c79716e5e7a3e458e8898d1eb3fc63b6fb69da457384520bb4aa  ./README.md
 684d4ff5ab490cf797dff74bb6ec88ed5e5089f448bf1d59504f94a7f9d1bb4a  ./install.sh
 d6777fd730714bc76760be5797f02bbdc1ab11add0df6c80eb9e0c560cd7ed4a  ./payload/LiteLoaderQQNT/LICENSE
 abdb0f9d53fdbe5cbae90518d5851842736bb4dcba02b7143424243cbc6aea96  ./payload/LiteLoaderQQNT/package.json

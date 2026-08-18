@@ -1,7 +1,5 @@
 # LiteLoaderQQNT macOS 一键离线安装包（v5 轻量化修复版）
 
-> 当前仓库是供个人设备迁移和维护的非官方修复版。仓库保持私有；请勿提交 QQ 账号数据、消息数据库、图片缓存、诊断日志或其他个人信息。
-
 此包用于个人设备间迁移，包含：
 
 - LiteLoaderQQNT 1.4.1。
@@ -99,4 +97,4 @@ RUN_NETWORK_TESTS=1 bash run-tests.sh
 - LiteLoaderQQNT：<https://github.com/LiteLoaderQQNT/LiteLoaderQQNT>，MIT License。
 - Anti-Recall：<https://github.com/xh321/LiteLoaderQQNT-Anti-Recall>，MIT License。本包基于 0.3.0 加入 macOS 数据库、后台会话主动取回、图片本地保存与跨重启恢复修复。
 
-这是非官方修改，会改变 QQ 应用包并使腾讯原始代码签名校验失败。第三方插件可能带来账号、隐私、数据和兼容性风险。建议仅自用，不要公开传播，也不要向 QQ 官方渠道提交带有第三方插件界面的截图或反馈。
+这是非官方修改，会改变 QQ 应用包并使腾讯原始代码签名校验失败。第三方插件可能带来账号、隐私、数据和兼容性风险，请自行评估后使用。公开提交 Issue 或调试资料前，请先移除 QQ 账号、消息内容、群号、图片和本机路径等个人信息；也不要向 QQ 官方渠道提交带有第三方插件界面的截图或反馈。
